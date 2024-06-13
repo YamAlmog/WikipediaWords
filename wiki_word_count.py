@@ -154,6 +154,7 @@ def main():
                 logging.debug("future has created")
                 futures.append(future)
                 # Wait for all tasks to complete
+                
             concurrent.futures.wait(futures)
             shared_data_frame.to_csv('word_distribution.csv', index=True)
             print("Update word_distribution csv file")
